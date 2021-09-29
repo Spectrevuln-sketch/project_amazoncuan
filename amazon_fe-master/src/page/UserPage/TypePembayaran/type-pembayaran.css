@@ -1,0 +1,16 @@
+.van-nav-bar__title{
+  font-size: 20px !important;
+}
+.van-nav-bar__right > * {
+  font-size: 15px !important;
+}
+.share > * {
+  font-size: 15px !important;
+}
+
+.title[data-v-7fcad33a]{
+  font-size: medium !important;
+}
+.info[data-v-7fcad33a]{
+  font-size: 12px !important;
+}

@@ -1,0 +1,23 @@
+.font-task-list {
+  font-size:12px !important;
+}
+
+.btn{
+  cursor: pointer;
+    border-radius: 2px;
+    background: #29b7d8;
+    line-height: 40px;
+    color: #fff;
+    padding: 0 1px;
+    font-weight: bold;
+    letter-spacing: .25px;
+    text-transform: uppercase;
+}
+
+.task_title_info li .btn[data-v-24948ec7] {
+  font-size: 10px !important;
+  color: rgb(255, 255, 255);
+  background-color: rgb(25, 137, 250);
+  padding: 0 5px 0 5px !important;
+  border-radius: 0.10667rem;
+}

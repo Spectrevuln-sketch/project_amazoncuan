@@ -1,0 +1,32 @@
+/* Font Style */
+.font-task-small{
+  font-size:small !important;
+}
+.font-task-medium{
+  font-size: 20px !important;
+}
+
+/* Content Style */
+.grade-content{
+  margin-top: 0;
+  height:25% !important;
+}
+.cell-title{
+  margin-top: -10%;
+}
+
+.Site .van-tabs__line {
+  width: 10%;
+  background-color: #4087f1;
+}
+.van-tabs__line{
+    position: absolute;
+    bottom: .4rem;
+    left: 7.5%;
+    z-index: 1;
+    width: 1.06667rem;
+    height: .08rem;
+    background-color: #ee0a24;
+    border-radius: .08rem;
+}
+

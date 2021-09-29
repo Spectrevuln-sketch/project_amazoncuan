@@ -1,0 +1,47 @@
+.font-user-small{
+  font-size: 16px !important;
+}
+.van-grid-item__text{
+  margin: -10px 0 0 0;
+}
+.van-cell__label{
+  margin: -10px 0 0 0;
+
+}
+.van-cell__title{
+  margin: 10px 0 -5px 0;
+
+}
+.van-button__text{
+  font-size:10px;
+}
+.van-button--mini{
+height: 2px;
+width:1.3rem;
+}
+.cut{
+  padding: 0 10px 0 15px;
+  margin: 0 5px 0 5px;
+}
+
+.title{
+  font-size: 15px !important;
+  margin:0 0 0 -5px;
+}
+.Number{
+  font-size: 20px !important;
+}
+
+.van-grid-item__icon-wrapper{
+  font-size: 15px !important;
+  
+}
+.MyEarnings_text{
+  font-size: 20px !important;
+  
+}
+
+.Menu .van-grid-item__text{
+  
+  font-size: 15px !important;
+}

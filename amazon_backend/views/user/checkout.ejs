@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gateway pembayaran</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../../assets/plugins/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container index-page" style="width: 100%; margin-right: 10em !important;">
+    <div class="alert alert-danger" id="error-msg" role="alert" hidden="true">
+      A simple primary alert—check it out!
+    </div>
+    <div>
+      <div class="header">
+        <div class="language">
+          <img src="../assets/images/language@2x.png" style="width: 22px;height: 22px;"
+            alt=""><span>Indonesian</span><img class="arrow" src="../assets/images/arrow@2x.png"
+            style="width:12px;height:8px;" alt="">
+        </div>
+        <div class="font13">Berlaku 24 jam</div>
+      </div>
+      <div class="card-info">
+        <div class="total-text">
+          <div class="font12 text">Total Penmbayaran</div>
+          <div class="total-number"><img src="../assets/images/idr@2x.png" style="width: 44px;height: 26px;" alt="">
+            <div class="number">
+              <%= amount %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="halfpxline"></div>
+      <div class="card-footer-info">
+        <div>
+          <div class="key font10">Nomor Pesanan:</div>
+          <div class="value no">
+            <%= refrensi %>
+          </div>
+        </div>
+        <div>
+          <div class="key font10">Barang:</div>
+          <div class="value barang">safe</div>
+        </div>
+      </div>
+    </div>
+    <div class="list-container">
+
+      <div class="list-item va">
+        <div class="menu active">
+          <i class="fas fa-fw fa-university" style="font-size: 2em;"></i>
+          <div class="title">
+            Virtual Account
+          </div>
+          <img src="../assets/images/list/arrow@2x.png" style="width: 8px;height: 14px;" alt="" class="arrow">
+        </div>
+
+        <div class="menu-items">
+
+          <% for( let i=0; i < ListBank.length; i++ ) { %>
+            <% if (ListBank[i].group=='Virtual Account' ) { %>
+              <% if (ListBank[i].active===true) { %>
+                <a class="BT" href='#' data-code="<%= ListBank[i].code %>" data-type="<%= ListBank[i].type %>"
+                  data-merchant_ref="<%= refrensi %>" data-token="<%= token %>" data-amount="<%= amount%>">
+                  <div class="item" id="get-pay">
+                    <div class="item-content">
+                      <img src="../assets/images/<%= ListBank[i].code %>.png" style="width: 42px;height: 29px;" alt="">
+                      <div>
+                        <%= ListBank[i].name %>
+                      </div>
+                    </div>
+
+                  </div>
+                </a>
+                <% } %>
+                  <% } %>
+                    <% } %>
+
+        </div>
+        <div class="halfpxline"></div>
+      </div>
+    </div>
+    <div class="page-footer small"><img src="../assets/images/lock.png" style="width: 26px;height: 29px;" alt="">
+      <div class="font16 text">THIS IS A SECURE TRANSACTION</div>
+      <a href="https://amazoncuan.com" style="text-decoration: none; font-size: smaller;"
+        class="back-to-last">KEMBALI</a>
+    </div>
+  </div>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/index.js?v=20201113"></script>
+  <script>
+    $('.BT').click(function () {
+      var code = $(this).data('code')
+      var type = $(this).data('type')
+      var token = $(this).data('token')
+      var merchant_ref = $(this).data('merchant_ref')
+      var amount = $(this).data('amount');
+      $.ajax({
+        url: '/checkoutApi/TopUp',
+        method: 'post',
+        dataType: 'json',
+        data: {
+          code,
+          type,
+          token,
+          amount,
+          merchant_ref
+        }, success(data) {
+          console.log('ok')
+          // console.log(data)
+        }, error: function (xhr, status, error) {
+          var err = eval("(" + xhr.responseText + ")");
+          $('#error-msg').attr('hidden', false).html(err.message)
+          setTimeout(() => {
+            $('#error-msg').fadeOut().attr('hidden', true).html('')
+          }, 3000)
+        }
+      })
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

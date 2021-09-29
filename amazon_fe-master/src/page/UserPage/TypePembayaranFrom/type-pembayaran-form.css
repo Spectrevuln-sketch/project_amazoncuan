@@ -1,0 +1,23 @@
+
+form[data-v-7fcad33a] > *{
+  font-size:17px;
+}
+.van-cell.van-field{
+  paddingTop:-10px;
+  height:100% !important;
+}
+
+
+.recharge{
+font-size: medium;
+}
+.cancel{
+  font-size: medium;
+}
+.stay-right{
+  padding-left:   100px
+}
+
+.NoticePopup{
+  font-size : 12px
+}

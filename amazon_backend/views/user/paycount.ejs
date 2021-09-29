@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gateway pembayaran</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/bankdetail.css">
+    <style>
+        .cpoy-btn:active {
+            background-image: linear-gradient(to right top, #64a2ff, #678fe8, #677dd1, #646bba, #605aa3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bank-detail-page">
+        <div>
+            <div class="header">
+                <div class="language"><img src="../assets/images/language@2x.png" style="width: 22px;height: 22px;"
+                        alt=""><span>Indonesian</span><img class="arrow" src="../assets/images/arrow@2x.png"
+                        style="width:12px;height:8px;" alt=""></div>
+                <div class="font13">Berlaku 24 jam</div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div>
+                <div id="count-down">
+
+                </div>
+                <div class="pay-no-name" style="margin-top: 5em;">Nomor Rekening</div>
+                <div class="pay-no">
+                    <%= noRek %>
+                </div>
+                <div class="infos">
+                    <div class="item">
+                        <div class="key">Bank:</div>
+                        <div class="value type-img">
+                            <span>
+                                <%= code_bank %>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="key">Nama Rekening:</div>
+                        <div class="value Barang">safe</div>
+                    </div>
+                    <div class="item">
+                        <div class="key">Nilai Transfer:</div>
+                        <div class="value number"><span class="TotalPembayaran">
+                                <%= rupiah %>
+                            </span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-container">
+                <div class="text">Klik utk salin Nomor Rekening</div><button class="cpoy-btn"
+                    onclick="getRek('.pay-no');">Salin
+                    Nomor Rekening Ke
+                    papan klip</button>
+            </div>
+            <div class="list-container" hidden>
+                <div class="list-item">
+                    <div class="menu">
+                        <div class="title">ATM BNI</div><img src="../assets/images/list/arrow@2x.png"
+                            style="width: 8px;height: 12px;" alt="" class="arrow">
+                    </div>
+                    <div class="desc">
+                        <p>1.Masukkan Kartu Anda.</p>
+                        <p>2.Pilih Bahasa.</p>
+                        <p>3.Masukkan PIN ATM Anda.</p>
+                        <p>4.Pilih "Menu Lainnya".</p>
+                        <p>5.Pilih "Transfer".</p>
+                        <p>6.Pilih Jenis rekening yang akan Anda gunakan (Contoh; "Dari Rekening Tabungan").</p>
+                        <p>7.Pilih “Virtual Account Billing”</p>
+                        <p>8.Masukkan nomor Virtual Account Anda (contoh: 86320877xxxx1441).</p>
+                        <p>9.Tagihan yang harus dibayarkan akan muncul pada layar konfirmasi</p>
+                        <p>10.Konfirmasi, apabila telah sesuai, lanjutkan transaksi.</p>
+                        <p>11.Transaksi Anda telah selesai.</p>
+                    </div>
+                    <div class="halfpxline"></div>
+                </div>
+                <div class="list-item">
+                    <div class="menu">
+                        <div class="title">Internet Banking BNI</div><img src="../assets/images/list/arrow@2x.png"
+                            style="width: 8px;height: 12px;" alt="" class="arrow">
+                    </div>
+                    <div class="desc">
+                        <p>1.Akses BNI Mobile Banking dari handphone kemudian masukkan user ID dan password.</p>
+                        <p>2.Pilih menu “Transfer”.</p>
+                        <p>3.Pilih menu “Virtual Account Billing” kemudian pilih rekening debet.</p>
+                        <p>4.Masukkan nomor Virtual Account Anda (contoh: 86320877xxxx1441) pada menu "input baru".
+                        </p>
+                        <p>5.Tagihan yang harus dibayarkan akan muncul pada layar konfirmasi</p>
+                        <p>6.Konfirmasi transaksi dan masukkan Password Transaksi.</p>
+                        <p>7.Pembayaran Anda Telah Berhasil.</p>
+                    </div>
+                    <div class="halfpxline"></div>
+                </div>
+                <div class="list-item">
+                    <div class="menu">
+                        <div class="title">SMS Banking BNI</div><img src="../assets/images/list/arrow@2x.png"
+                            style="width: 8px;height: 12px;" alt="" class="arrow">
+                    </div>
+                    <div class="desc">
+                        <p>1.Ketik alamat https://ibank.bni.co.id kemudian klik "Enter".</p>
+                        <p>2.Masukkan User ID dan Password.</p>
+                        <p>3.Pilih menu "Transfer"</p>
+                        <p>4.Pilih “Virtual Account Billing”.</p>
+                        <p>5.Kemudian masukan nomor Virtual Account Anda (contoh: 86320877xxxx1441) yang hendak
+                            dibayarkan. Lalu pilih rekening debet yang akan digunakan. Kemudian tekan "lanjut"</p>
+                        <p>6.Kemudin tagihan yang harus dibayarkan akan muncul pada layar konfirmasi</p>
+                        <p>7.Masukkan Kode Otentikasi Token.</p>
+                        <p>8.Pembayaran Anda telah berhasil</p>
+                    </div>
+                    <div class="halfpxline"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page-footer small"><img src="../assets/images/lock.png" style="width: 26px;height: 29px;" alt="">
+            <div class="font16 text">THIS IS A SECURE TRANSACTION</div>
+            <div class="back-to-last">KEMBALI</div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/clipboard.min.js"></script>
+    <!-- <script src="../assets/js/bankdetail.js"></script> -->
+    <scipt id="json" type="application/json">
+        {
+        "copy-clip": "http://localhost:8557"
+        }
+    </scipt>
+    <script>
+
+        function CountDown() {
+            $.ajax({
+                url: "/checkoutApi/count-down",
+                dataType: "json",
+                method: "get",
+                success: function (date) {
+                    console.log(date)
+                    $('#count-down').html('<h2>' + date.jam + ':' + date.menit + ':' + date.detik + '</h2>')
+                }
+            })
+        }
+        setInterval(() => {
+            CountDown();
+        }, 1000)
+
+
+        function getRek(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).html()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+
+    </script>
+</body>
+
+</html>

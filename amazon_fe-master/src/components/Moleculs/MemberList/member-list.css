@@ -1,0 +1,76 @@
+.van-tab--active{
+   border-color:  radial-gradient(circle, #fffffb, #fdfde9, #fbfbd8, #faf8c6, #f8f6b4, #f8f6a4, #f9f593, #f9f582, #faf76e, #fcf957, #fcfb3b, #fdfd00);
+   background-color : radial-gradient(circle, #fffffb, #fdfde9, #fbfbd8, #faf8c6, #f8f6b4, #f8f6a4, #f9f593, #f9f582, #faf76e, #fcf957, #fcfb3b, #fdfd00);
+  }
+  .van-on{
+    background-color:  radial-gradient(circle, #fffffb, #fdfde9, #fbfbd8, #faf8c6, #f8f6b4, #f8f6a4, #f9f593, #f9f582, #faf76e, #fcf957, #fcfb3b, #fdfd00);
+    background-repeat: no-repeat !important;
+    font-weight:500;
+    display: inline-block;
+  }
+  .font-small{
+    font-size:smaller !important;
+  }
+.van-tab--swipe-member{
+     border-color: rgb(240, 241, 245); 
+     background-color :rgb(207, 207, 207);
+     color: rgb(227, 228, 233);
+     margin-top: 5px;
+}
+.van-tab--swipe-member img.img-swiper-react{
+  margin-top: 20px;
+  border-radius:50% !important;
+  background-color:#D5BE2D !important;
+  border:2px solid #D5BE2D !important;
+  float:left;
+  width:45px !important;
+  height:45px !important;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.van-tab--swipe-member .van-cell__title{
+  margin-top: 20px;
+  font-size: smaller !important;
+}
+
+.van-tab--swipe-member .profit-image{
+background-color: hsla(0,0%,100%,.5);
+width: 20px;
+float: right;
+display: inline;
+margin-top: -10%;
+padding:5px 50px 5px 5px ;
+margin-right: 20px;
+border-radius: 20px;
+color: #D5BE2D !important;
+}
+.van-tab--swipe-member .profit-avarage{
+  color: #D5BE2D !important;
+  float: right;
+  display: inline;
+  margin-top: -8%;
+  margin-right: 33px;
+  font-size: smaller ;
+  font-weight:500;
+}
+
+
+.tab-section{
+  color: #D5BE2D !important;
+}
+
+.slider-set{
+  color: #D5BE2D !important;
+}
+
+.van-tab--swipe-member{
+  background-color: #D5BE2D !important;
+}
+
+.van-tabs__nav.van-tabs__nav--card .van-on.van-tab--active{
+  background-image: radial-gradient(circle, #fffffb, #fdfde9, #fbfbd8, #faf8c6, #f8f6b4, #f8f6a4, #f9f593, #f9f582, #faf76e, #fcf957, #fcfb3b, #fdfd00);
+  padding: 5px 10px 10px 10px;
+}
+
+
+

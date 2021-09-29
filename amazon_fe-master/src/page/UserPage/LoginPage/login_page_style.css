@@ -1,0 +1,32 @@
+.van-icon{
+  color: #bbb;
+}
+.van-field__body{
+  font-size: small;
+  color: #bbb ;
+}
+.link-page-left{
+  float: left;
+  color: #bbb ;
+  font-size: small;
+}
+.link-page-right{
+  float: right;
+  color: #bbb ;
+  font-size: small;
+}
+.van-field__left-icon i {
+  font-size: 15px !important;
+}
+.van-nav-bar__text{
+  font-size: 15px !important;
+}
+.van-nav-bar__left .van-icon{
+  font-size: 25px !important;
+}
+.Site .van-nav-bar__content{
+  margin-top: -10px;
+}
+.PageBox{
+  overflow: hidden;
+}

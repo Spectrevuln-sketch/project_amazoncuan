@@ -1,0 +1,20 @@
+.van-button{
+  height:3em;
+}
+
+.van-button .van-button__content span{
+  padding: 5px 20px !important;
+}
+.van-field{
+  height: 3em !important;
+}
+
+.link-page-left{
+  color: black !important;
+  margin-left: 20px;
+}
+.link-page-right{
+  color: black !important;
+  margin-right: 20px;
+}
+

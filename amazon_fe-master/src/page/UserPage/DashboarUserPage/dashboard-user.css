@@ -1,0 +1,21 @@
+.font-small{
+  font-size:15px;
+  color: #D4AF37;
+}
+
+@media (max-width: 575.98px){
+
+  .van-grid-item__content img{
+    width: 5%;
+    height: 40%;
+    display: inline-block;
+    z-index: -100;
+  }
+  .van-grid-item__content h4{
+    text-align: center;
+  }
+
+  .van-tabbar .van-tabbar-item__text{
+    font-size: small;
+  }
+}
